@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+
+<BorderPane xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.AddBookController">
+   <bottom>
+      <GridPane prefHeight="525.0" prefWidth="530.0" BorderPane.alignment="CENTER">
+        <columnConstraints>
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+          <ColumnConstraints hgrow="SOMETIMES" maxWidth="323.2000244140625" minWidth="10.0" prefWidth="322.40003662109376" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="186.60000000000002" minWidth="10.0" prefWidth="50.59996337890624" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="191.39996337890625" minWidth="10.0" prefWidth="57.0" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints maxHeight="170.60001220703126" minHeight="10.0" prefHeight="30.59998970031738" vgrow="SOMETIMES" />
+          <RowConstraints maxHeight="306.6000045776367" minHeight="5.3999927520751925" prefHeight="39.00000610351562" vgrow="SOMETIMES" />
+          <RowConstraints maxHeight="338.4" minHeight="10.0" prefHeight="57.40001220703125" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="395.9999816894531" minHeight="9.599996948242179" prefHeight="63.79999389648438" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="411.79999542236334" minHeight="0.0" prefHeight="80.6000061035156" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="411.79999542236334" minHeight="10.0" prefHeight="159.00001220703132" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="411.79999542236334" minHeight="10.0" prefHeight="99.80001220703122" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <Label text="nom" />
+            <Label text="prenom" GridPane.rowIndex="1" />
+            <Label text="email" GridPane.rowIndex="2" />
+            <Button fx:id="ajouterBtn" mnemonicParsing="false" onAction="#ajouterPersonne" text="ajouter a la table" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+            <Label prefHeight="18.0" prefWidth="0.0" GridPane.rowIndex="4" />
+            <Label GridPane.columnIndex="1" GridPane.rowIndex="4" />
+            <Label GridPane.columnIndex="2" GridPane.rowIndex="4" />
+            <Button fx:id="supprimerBtn" mnemonicParsing="false" onAction="#supprimerPersonne" text="supprimer" GridPane.rowIndex="6" />
+            <Button fx:id="importerBtn" mnemonicParsing="false" onAction="#importerListe" text="importer" GridPane.columnIndex="1" GridPane.rowIndex="6" />
+            <Button fx:id="exporterBtn" mnemonicParsing="false" onAction="#exporterListe" text="exporter" GridPane.columnIndex="2" GridPane.rowIndex="6" />
+            <Button fx:id="quitterBtn" mnemonicParsing="false" onAction="#quitterApplication" text="quitter" GridPane.columnIndex="3" GridPane.rowIndex="6" />
+            <TableView fx:id="table" prefHeight="158.0" prefWidth="277.0" GridPane.columnIndex="1" GridPane.rowIndex="5">
+              <columns>
+                <TableColumn fx:id="nomCol" prefWidth="75.0" text="nom" />
+                <TableColumn fx:id="prenomCol" prefWidth="75.0" text="prenom" />
+                  <TableColumn fx:id="emailCol" prefWidth="75.0" text="email" />
+                  <TableColumn fx:id="ageCol" prefWidth="75.0" text="age" />
+              </columns>
+            </TableView>
+            <TextField fx:id="tfNom" GridPane.columnIndex="1" />
+            <TextField fx:id="tfPrenom" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+            <TextField fx:id="tfEmail" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+            <Label text="age" GridPane.rowIndex="4" />
+            <TextField fx:id="tfAge" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+         </children>
+      </GridPane>
+   </bottom>
+</BorderPane>
